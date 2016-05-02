@@ -13,5 +13,9 @@ func main() {
 	// multiplexer()
 	// seqMultiplexer()
 	// selectCase()
-	selectTimeout()
+	// selectTimeoutOnEachWait()
+	// selectOverallTimeout()
+	// quitChannel()
+	// searchGoogle("4.0")
+	chanTest()
 }
