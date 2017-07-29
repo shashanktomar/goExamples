@@ -12,7 +12,8 @@ func quitChannel() {
 	quit <- true
 	fmt.Println("Let's Quit")
 	// this is required to give some time to quit,
-	// other program exit main function and async go routines never get a chance to read quit channel
+	// otherwise program exit main function and async
+	// go routines never get a chance to read quit channel
 	time.Sleep(500 * time.Millisecond)
 }
 

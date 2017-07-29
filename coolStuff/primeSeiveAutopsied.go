@@ -89,11 +89,11 @@ func goid() int {
 }
 
 // The prime sieve: Daisy-chain Filter processes.
-func primeSeiveAutopsied() {
+func primeSeiveAutopsied(count int) {
 	ch := make(chan int) // Create a new channel.
 	writeToMap(ch, "ch")
 	go generate(ch) // Launch Generate goroutine.
-	for i := 0; i < 10; i++ {
+	for i := 0; i < count; i++ {
 		chName := readFromMap(ch)
 		logReading(chName, "Main")
 		prime := <-ch

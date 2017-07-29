@@ -11,10 +11,10 @@ func multiplexer() {
 	}
 }
 
-func fanIn(channnels ...<-chan string) <-chan string {
+func fanIn(channels ...<-chan string) <-chan string {
 	ch := make(chan string)
-	for i := range channnels {
-		c := channnels[i]
+	for i := range channels {
+		c := channels[i]
 		go func() {
 			for {
 				ch <- <-c
